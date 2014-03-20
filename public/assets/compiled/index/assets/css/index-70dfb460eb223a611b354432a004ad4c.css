@@ -20,7 +20,7 @@
 	display:inline;
 	width:104px;
 	height:32px;
-	background:url(../images/more_raiders.png);
+	background:url(/assets/images/more_raiders.png);
 	margin-top:13px;
 	margin-left:20px;
 	cursor:pointer;
@@ -218,7 +218,7 @@
 	cursor:pointer;
 	width:150px;
 	height:40px;
-	background:url(../images/plane_search.png);
+	background:url(/assets/images/plane_search.png);
 }
 .tr1 td,.tr2 td{
     padding: 0 5px;
@@ -237,7 +237,6 @@
 	background:#0099ff;
     color:white;
 }
-
 .tr2:hover .plane_price_td{
 	background:#ff9500;
 }
@@ -335,9 +334,9 @@
 	left:260px;
 	width:40px;
 	height:50px;
-	background:url(../images/message1.png);
+	background:url(/assets/images/message1.png);
 }
 .user_talk:hover
 {
-	background:url(../images/message2.png);
+	background:url(/assets/images/message2.png);
 }

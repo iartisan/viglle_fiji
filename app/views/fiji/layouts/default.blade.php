@@ -16,8 +16,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- CSS
 		================================================== -->
-        {{ Basset::show('public.css') }}
 
+<meta name="renderer" content="webkit">
 		@section('styles')
 		@show
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -36,7 +36,6 @@
 	<body>
 			<!-- 头部开始  -->
 			<div class="box">
-				<div class="head" style="position:absolute;top:0px;z-index:1;"></div>
 				<div style="width:1000px;margin-right:auto;margin-left:auto;z-index:2;position:relative;height:630px;">
 					<div class="head_list">
 						<div class="logo"><a href="{{{ URL::to('/') }}}" style="display:block;width:100%;height:100%;"></a></div>

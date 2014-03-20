@@ -3,8 +3,11 @@
 @section('styles')
 		@parent
 		
-		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+        {{ Basset::show('hotel.css') }}
 		
+		<style>
+			.box{background:url(../assets/images/hotel.jpg) center 0px no-repeat;}
+		</style>
 
 
 @stop
@@ -13,7 +16,7 @@
 				<p class="content_title"><span style="font-size:30px;color:#0099ff;">特色</span><strong style="color:#333333;">酒店</strong></p>
 				<div class="hotel_1">
 					<div class="hotel_part1">
-						<div class="hotel_part1_img1">
+						<div class="hotel_part1_img1 show_block">
 							<img src="{{{ URL::asset($hotels[0]->pic1_url) }}}/origin.jpg" />
 						</div>
 						<div class="hotel_part1_img2">
@@ -21,9 +24,9 @@
 						</div>
 					</div>
 					<div class="hotel_part2">
-						<div class="hotel_part2_img1" onmouseenter="show_bg(0)">
+						<div class="hotel_part2_img1">
 							<img src="{{{ URL::asset($hotels[0]->pic3_url) }}}/origin.jpg" />
-							<div class="hotel_base" onmouseleave="close_bg(0)">
+							<div class="hotel_base">
 								<div class="hotel_part3_base"></div>
 								<div class="hotel_price_bg" >
 									<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>

@@ -28,6 +28,41 @@ return array(
 
     'collections' => array(
 
+        'index' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('index.css');
+                $collection->add('hotel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'hotel' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('hotel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
         'public' => function($collection)
         {
             $collection->directory('assets/css', function($collection)
@@ -41,7 +76,6 @@ return array(
             {
                 $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
-                $collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
         },

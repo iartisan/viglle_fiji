@@ -1,10 +1,9 @@
 @extends('fiji.layouts.default')
 @section('styles')
 		@parent
-		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/hotel.css') }}}" />
+        {{ Basset::show('index.css') }}
 		<style>
-			.head{background:url(../assets/images/index.jpg) center 0px;}
+			.box{background:url(../assets/images/index.jpg) center 0px no-repeat;}
 		</style>
 @stop
 @section('content')
@@ -16,29 +15,29 @@
 				<div class="content_body">
 				<div class="hotel_1">
 					<div class="hotel_part1">
-						<div class="hotel_part1_img1">
+						<div class="hotel_part1_img1 show-block img-block">
 							<img src="{{{ URL::asset($hotels[0]->pic1_url) }}}/origin.jpg" />
 						</div>
-						<div class="hotel_part1_img2">
+						<div class="hotel_part1_img2 show-block img-block">
 							<img src="{{{ URL::asset($hotels[0]->pic2_url) }}}/origin.jpg" />
 						</div>
 					</div>
-					<div class="hotel_part2">
-						<div class="hotel_part2_img1" onmouseenter ="show_bg(0)">
+					<div class="hotel_part2 show-block">
+						<div class="hotel_part2_img1 img-block" onmouseenter ="show_bg(0)">
 							<img src="{{{ URL::asset($hotels[0]->pic3_url) }}}/origin.jpg" />
-							<div class="hotel_base" onmouseleave="close_bg(0)">
-								<div class="hotel_part3_base"></div>
-								<div class="hotel_price_bg" >
-									<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>
-								</div>
-							</div>
+							<!--<div class="hotel_base" onmouseleave="close_bg(0)">-->
+								<!--<div class="hotel_part3_base"></div>-->
+								<!--<div class="hotel_price_bg" >-->
+									<!--<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>-->
+								<!--</div>-->
+							<!--</div>-->
 						</div>
 						<div class="hote1_part2_word">
 							<div class="hote1_part2_word_top"></div>
                             <div class="hote1_part2_word_text"><div class="hote_special">玩转斐济岛</div></div>
 						</div>
 					</div>
-					<div class="hotel_part3">
+					<div class="hotel_part3 show-block">
 						<div class="hotel_part3_top"></div>
 						<div class="hotel_part3_content">
 								<div class="hotel_part3_text">{{{ $hotels[0]->content }}}</div>
@@ -47,33 +46,33 @@
 				</div>
 				
 				<div class="hotel_2">
-					<div class="hotel_part2" >
+					<div class="hotel_part2 show-block" >
 						<div class="hote1_part2_word">
 							<div class="hote1_part2_word_text"><div class="hote_special">吃货走天下</div></div>
 							<div class="hote1_part2_word_top"></div>
 						</div>
-						<div class="hotel_part2_img1" style="margin:0px;" onmouseenter="show_bg(2)">
+						<div class="hotel_part2_img1 img-block" style="margin:0px;" >
 							<img src="{{{ URL::asset($hotels[1]->pic1_url) }}}/origin.jpg" />
-							<div class="hotel_base"  onmouseleave="close_bg(2)">
-								<div class="hotel_part3_base"></div>
-								<div class="hotel_price_bg">
-									<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>
-								</div>
-							</div>
+							<!--<div class="hotel_base"  onmouseleave="close_bg(2)">-->
+								<!--<div class="hotel_part3_base"></div>-->
+								<!--<div class="hotel_price_bg">-->
+									<!--<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>-->
+								<!--</div>-->
+							<!--</div>-->
 						</div>
 					</div>
 					<div class="hotel_part1">
-						<div class="hotel_part1_img1" onmouseenter="show_bg(3)" >
+						<div class="hotel_part1_img1 show-block img-block" >
 							<img src="{{{ URL::asset($hotels[1]->pic2_url) }}}/origin.jpg" />
-							<div class="hotel_base" onmouseleave="close_bg(3)">
+							<div class="hotel_base" >
 								<div class="hotel_text_show">{{{ $hotels[1]->content }}}</div>
 							</div>
 						</div>
-						<div class="hotel_part1_img2">
+						<div class="hotel_part1_img2 show-block img-block">
 							<img src="{{{ URL::asset($hotels[1]->pic3_url) }}}/origin.jpg" />
 						</div>
 					</div>
-					<div class="hotel_part3">
+					<div class="hotel_part3 show-block img-block">
 						<img src="{{{ URL::asset($hotels[1]->pic4_url) }}}/origin.jpg" />
 					</div>
 				</div>
@@ -106,40 +105,42 @@
 						</div>
 						<div class="plane_bg"></div>
 					</div>
-					<!--div class="plane_show">
-						<table cellspacing=0 cellpadding=0 style="font-size:18px;width:340px;margin:40px auto;border:0px solid red;">
+					<div class="plane_show">
+						<table cellspacing=0 cellpadding=0 style="font-size:18px; width:100%;margin:40px  auto;border:0px solid red;">
+                            <tbody>
 							<tr class="tr1">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
-							<tr class="tr2" onmouseover="Isover(this)" onmouseout="Isout(this)">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
 							</tr>
+                            </tbody>
 						</table>
-					</div-->
+					</div>
 					<div class="weather">
 						<div class="weather_top"><span style="font-size:30px;margin-left:20px;">天气</span><span style="font-size:16px;margin-left:30px;">{{ date('Y/m/d') }}</span></div>
 						<?php
@@ -263,7 +264,7 @@
 				<div class="content_bottom"></div>
 				<div style="height:885px;width:100%;margin-top:45px;">
 					<p><span style="font-size:30px;margin-left:30px;color:#ff9500;">人气</span><span style="font-size:18px;color:#333;">之星</span></p>
-					<ul style="margin-right:-20px">
+					<ul class="user-star-block" >
 @foreach($users as $user)
 						<li class="user_mes">
 							<ul>
@@ -278,30 +279,14 @@
 							</ul>
 						</li>
 @endforeach
-						<li class="user_mes">
-							<ul>
-								<li class="user_img"><img src="images/user1.png" width=320 height=250 /></li>
-								<li class="user_name"><div class="user_name_box">漫天小星星</div><div class="user_talk"></div></li>
-							</ul>
-						</li>
-						<li class="user_mes">
-							<ul>
-								<li class="user_img"><img src="images/user1.png" width=320 height=250 /></li>
-								<li class="user_name"><div class="user_name_box">漫天小星星</div><div class="user_talk"></div></li>
-							</ul>
-						</li>
-						<li class="user_mes">
-							<ul>
-								<li class="user_img"><img src="images/user1.png" width=320 height=250 /></li>
-								<li class="user_name"><div class="user_name_box">漫天小星星</div><div class="user_talk"></div></li>
-							</ul>
-						</li>
 					</ul>
 				</div>
 			</div>
 				
 			</div>
 			<!-- 正文结束  -->
+@stop
+@section('scripts')
 			<script>
 				function show_bg(num)
 				{
@@ -319,6 +304,8 @@
 				{
 					obj.className="tr2";
 				}
+                $(".user_mes:nth-child(3n)").css('margin-right','0');
+            
 			</script>
 			@stop
 		
