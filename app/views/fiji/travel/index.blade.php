@@ -1,7 +1,10 @@
 @extends('fiji.layouts.default')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{{ asset('css/travel.css') }}}" />
+        {{ Basset::show('travel.css') }}
+		<style>
+			.box{background:url(../assets/images/travel.jpg) center 0px no-repeat;}
+		</style>
 @stop
 
 

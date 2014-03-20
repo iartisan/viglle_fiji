@@ -2,9 +2,11 @@
 @section('styles')
 
 
-		<link rel="stylesheet" type="text/css" href="{{{ asset('css/raiders_w.css') }}}" />
+{{ Basset::show('travel-create.css') }}
 
-
+		<style>
+			.box{background:url(../assets/images/travel.jpg) center 0px no-repeat;}
+		</style>
 @stop
 @section('scripts')
 <script charset="utf-8" src="{{{asset('js/kindeditor/kindeditor.js')}}}"></script>

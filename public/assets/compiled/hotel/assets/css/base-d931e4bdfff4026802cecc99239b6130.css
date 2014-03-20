@@ -1,3 +1,4 @@
+
 *
 {
 	margin:0;
@@ -7,7 +8,7 @@ body
 {
 	margin:0;
 	padding:0;
-	font-family:'Î¢ÈíÑÅºÚ';
+	font-family:Helvetica,'microsoft yahei', Arial, sans-serif;
 	background:#f2f2f2;
 	overflow-x:hidden;
 }
@@ -22,6 +23,13 @@ body
 	height:500px;
 }
 /** Í·²¿µ¼º½À¸  **/
+
+.head_list{
+    /*-webkit-text-shadow:#ccc 1px 0 0,#ccc 0 1px 0,#ccc -1px 0 0,#ccc 0 -1px 0;*/
+/*-moz-text-shadow:#ccc 1px 0 0,#ccc 0 1px 0,#ccc -1px 0 0,#ccc 0 -1px 0;*/
+/*text-shadow:#ccc 1px 0 0,#ccc 0 1px 0,#ccc -1px 0 0,#ccc 0 -1px 0; */
+/**filter: Glow(Color=#cccccc, Strength=1);*/
+}
 
 #cboxContent {
 	background: transparent;
@@ -157,11 +165,11 @@ ul
 {
 	margin-top: 50px;
 	height:850px;
-	width:1920px;
+	/*width:1920px;*/
 }
 .bottom_word
 {
-	width:1920px;
+	/*width:1920px;*/
 	height:100px;
 	background:#ff9500;
 	color:#fff;
@@ -171,7 +179,6 @@ ul
 }
 .bottom_wall
 {
-	width:1920px;
 	height:500px;
 	background:url(/assets/images/wall.png) no-repeat;
 }
@@ -180,4 +187,11 @@ ul
 	width:100%;
 	height:250px;
 	background:#333;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+z-index: 2;
+color: #fff;
+background-color: #ff9500;
+border-color: #ff9500;
+cursor: default;
 }

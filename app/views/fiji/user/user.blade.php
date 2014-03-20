@@ -1,7 +1,10 @@
 @extends('fiji/layouts/default')
 
 @section('styles')
-		<link rel="stylesheet" type="text/css" href="{{{ asset('css/user.css') }}}" />
+    {{Basset::show('user-show.css')}}
+		<style>
+			.box{background:url({{Asset('assets/images/user_big.jpg')}}) center 0px no-repeat;}
+		</style>
 @stop
 
 
@@ -13,8 +16,8 @@
                             <a class="iframe" style="position: absolute;
 color: black;
 z-index: 999;
-margin-top: -25px;
-margin-left: 10px;
+left:10px;
+bottom:10px;
 font-size: small;" href="/user/avatar">点击更换头像</a>
                             @endif
 						</div>
@@ -32,7 +35,7 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
 								<div class="user_bottom">
 									<div class="user_show_word">{{{ $user->intro }}}</div>
                             @if ((!is_null($currentuser))&&($currentuser->id == $user->id)) 
-									<a href="/user/info" class="iframe">    <p>编辑个人介绍</p></a>
+									<a href="/user/info" class="iframe user-info-edit">    <p>编辑个人介绍</p></a>
                             @endif
 								</div>
 							</div>
@@ -72,33 +75,31 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
 						<div class="raiders_msg">
 							<ul class="raiders_content">
 @foreach($travels as $travel)
-								<li class="raiders_li1"><img src=" {{{ $travel->has_pic }}} " width=300 height=200 /></li>
-								<li class="raiders_li2">
-									<div style="width:380px;margin:20px;">
+                                <li class="raiders-li">
+								<div class="raiders_li1"><img src=" {{{ $travel->has_pic }}} " width=300 height=200 /></div>
+								<div class="raiders_li2">
+									<div style="width:380px;margin: 0 20px;">
                                         <a href=" {{{ $travel->url() }}} ">
 										<p class="raiders_title">{{{ $travel->title }}}</p>
                                         </a>
                                         <p><span class="raiders_user_name">{{{ $travel->author->username }}}</span><span class="raiders_user_time">发布于{{{ $travel->date() }}}</span></p>
                                         <p class="raiders_user_text">{{{ $travel->summary() }}}……</p>
 									</div>
-<div id="travel_mark_{{{ $travel->id }}}" style="float:right">
+<div id="travel_mark_{{{ $travel->id }}}" style="float:right;margin-right:20px;font-size:.8em;">
 				<a href="javascript:;" onclick="unlike({{{$travel->id}}})" class="unlike_post" style="display:none;" >取消赞</a>
                 <a href="javascript:;" onclick="like({{{$travel->id}}})" class="like_post" >
                     <img src=" {{asset('images/good.png')}} " alt="">
                 </a> 
-					<span id="if_like_{{{$travel->id}}}"></span> <span id="likecontent_{{{$travel->id}}}"><span  id="count_{{{$travel->id}}}" class="color">{{{$travel->mark}}}</span> <span id="people_{{{$travel->id}}}" class="color">人</span>喜欢</span>
+					<span id="if_like_{{{$travel->id}}}"></span> <span id="likecontent_{{{$travel->id}}}"><span  id="count_{{{$travel->id}}}" class="color">{{{$travel->mark}}}</span> <span id="people_{{{$travel->id}}}" class="color">人</span></span>
 </div>
-								</li>
+								</div>
+                                </li>
 @endforeach
 							</ul>
 						</div>
-						<div>
-							<ul class="show_page_1">
-                                {{ $travels->appends(array('p'=>'travel'))->links() }}
-								<li  class="show_li_1">1</li>
-								<li  class="show_li_2">2</li>
-								<li class="show_page_next">下一页</li>
-							</ul>
+
+						<div class="page">
+                                {{ $travels->links() }}
 						</div>
 					</div>
 					<div class="content_other_mes">
@@ -108,7 +109,7 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
 							<ul class="show_where_user">
                                 @foreach($users as $userlow)
 								<li>
-                                <p><img src=" {{{ $userlow->avatar }}} " width=105 height=105 /></p>
+                                <p><img src=" {{{ $userlow->avatar }}} " width=85 height=85 /></p>
                                 <p style="font-size:14px;color:#808080;height:30px;line-height:30px;" align=center>{{{$userlow->username}}}</p>
 								</li>
                                 @endforeach
@@ -119,7 +120,7 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
 							<ul class="show_city_user">
                                 @foreach($usersincity as $userlow)
 								<li>
-                                <p><img src=" {{{ $userlow->avatar }}} " width=105 height=105 /></p>
+                                <p><img src=" {{{ $userlow->avatar }}} " width=85 height=85 /></p>
                                 <p style="font-size:14px;color:#808080;height:30px;line-height:30px;" align=center>{{{$userlow->username}}}</p>
 								</li>
                                 @endforeach
@@ -176,14 +177,6 @@ font-size: small;" href="/user/avatar">点击更换头像</a>
                         @endif
                         @endforeach
 						
-						<div>
-							<ul class="show_page_2">
-	                            {{ $comments->appends(array('p'=>'usercomment'))->links() }}
-								<li  class="show_li_1">1</li>
-								<li  class="show_li_2">2</li>
-								<li class="show_page_next">下一页</li>
-							</ul>
-						</div>
 					</div>
 					
 			</div>

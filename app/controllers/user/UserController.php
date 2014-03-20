@@ -39,12 +39,13 @@ class UserController extends BaseController {
                 //return Redirect::to('user/login');
             return App::abort(404);
         }
-        $users = $this->user->orderBy('created_at','ASC')->take(8)->get();
-        $usersincity = $this->user->where('city','=',$user->city)->take(8)->get();
+        $users = $this->user->orderBy('created_at','ASC')->take(6)->get();
+        $usersincity = $this->user->where('city','=',$user->city)->take(6)->get();
         $p = Input::get('p');
         $userpics = $this->userpic->where('user_id', '=', $user->id)->orderBy('created_at','DESC')->take(8)->get();
         $travels = $this->travel->where('user_id','=',$user->id)->orderBy('created_at','DESC')->paginate(5);
-        $comments = $user->comments()->orderBy('created_at', 'DESC')->paginate(4);
+        //$comments = $user->comments()->orderBy('created_at', 'DESC')->paginate(4,array('*'),'comment-page');
+        $comments = $user->comments()->orderBy('created_at', 'DESC')->take(10)->get();
         //TO-DO 加入用户权限控制
         
 
@@ -415,7 +416,7 @@ class UserController extends BaseController {
     {
         $user = Auth::user();
         if(!empty($user->id)){
-            return Redirect::to('/');
+            return Redirect::to('/logined');
         }
 
         return View::make('fiji/user/login');
@@ -446,7 +447,7 @@ class UserController extends BaseController {
                 Session::forget('loginRedirect');
                 return Redirect::to($r);
             }
-            return Redirect::to('/');
+            return Redirect::to('/logined');
         }
         else
         {

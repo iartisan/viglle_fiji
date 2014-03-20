@@ -13,10 +13,12 @@
     -moz-box-shadow: 0 0 10px #222;
     box-shadow: 0 0 10px #222;
     *filter: Glow(Backgound-color=#cccccc, Strength=1);
+    overflow:hidden;
 }
 
 .img-block{
     position:relative;
+    overflow:hidden;
 }
 .img-block:after{
     content:"";
@@ -48,6 +50,14 @@
 	width:410px;
 	float:left;
 }
+
+.price_tag{
+    background-color: rgba(0,0,0,.6);
+    position:absolute;
+    bottom:0;
+    width: 350px;
+}
+
 .hotel_price_bg
 {
 	margin-top:430px;
@@ -75,6 +85,22 @@
 	z-index:1;
 }
 
+.hotel_part3_content{
+    height: 490px;
+}
+.hotel_part3_content .hote_base{
+    width: 230px;
+    height:490px;
+    background-color: rgba(0,0,0,.6);
+    position:absolute;
+    z-index:50;
+    top:0;
+    left:0;
+    opacity:0;
+}
+.hotel_part3_conten:hover .hote_base{
+    opacity:1;
+}
 .hotel_part1_img1 .hotel_base{
     width: 350px;
     height:250px;

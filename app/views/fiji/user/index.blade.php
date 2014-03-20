@@ -2,11 +2,9 @@
 
 @section('styles')
 {{ Basset::show('user.css') }}
+
 		<style>
-			.head
-			{
-				background:url(../assets/images/user_big.jpg) center 0px;
-			}
+			.box{background:url({{Asset('assets/images/travel.jpg')}}) center 0px no-repeat;}
 		</style>
 @stop
 @section('content')

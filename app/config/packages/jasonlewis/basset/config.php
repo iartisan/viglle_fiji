@@ -52,8 +52,94 @@ return array(
             {
                 $collection->add('less/master.less')->apply('Less');
 				$collection->add('base.css');
-                $collection->add('colorbox.css');
                 $collection->add('hotel.css');
+                $collection->add('colorbox.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'travel-show' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('show.css');
+                $collection->add('typo.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'travel-create' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                //$collection->add('colorbox.css');
+                $collection->add('raiders_w.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'travel' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('travel.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'user-show' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('user.css');
+            })->apply('UriRewriteFilter')->apply('CssMin');
+
+            $collection->directory('assets/js', function($collection)
+            {
+                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                //$collection->add('bootstrap/bootstrap.js');
+                $collection->add('jquery.colorbox.js');
+            })->apply('JsMin');
+        },
+        'ticket' => function($collection)
+        {
+            $collection->directory('assets/css', function($collection)
+            {
+                $collection->add('less/master.less')->apply('Less');
+				$collection->add('base.css');
+                $collection->add('colorbox.css');
+                $collection->add('air.css');
             })->apply('UriRewriteFilter')->apply('CssMin');
 
             $collection->directory('assets/js', function($collection)

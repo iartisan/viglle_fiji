@@ -13,13 +13,13 @@
 	margin-top:50px;
 	height:200px;
 	width:100%;
-	background:url(../images/content_bottom.png);
+	background:url(/assets/images/content_bottom.png);
 }
 .raiders_head
 {
 	height:50px;
 	width:100%;
-	background:url(../images/raiders_h.png);
+	background:url(/assets/images/raiders_h.png);
 }
 .raiders_title
 {
@@ -99,7 +99,7 @@
 }
 #enter
 {
-	background:url(../images/raiders_enter.png);
+	background:url(/assets/images/raiders_enter.png);
 }
 .buttons
 {
@@ -107,6 +107,6 @@
 }
 #del_empty
 {
-	background:url(../images/raiders_del.png);
+	background:url(/assets/images/raiders_del.png);
 	margin-left:20px;
 }

@@ -1,8 +1,10 @@
 @extends('fiji.layouts.default')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{{ asset('assets/css/air.css') }}}" />
-
+        {{ Basset::show('ticket.css') }}
+		<style>
+			.box{background:url(../assets/images/plane.jpg) center 0px no-repeat;}
+		</style>
 @stop
 
 
@@ -66,6 +68,7 @@
 							</li>
 						</ul>
 					</div>
+                   <div class="line_overlay"></div>
 				</div>
 				<p style="margin-left:30px;margin-top:40px;"><span style="font-size:30px;color:red;">特价 </span><strong style="color:#333333;">机票</strong></p>
 				<div class="search">

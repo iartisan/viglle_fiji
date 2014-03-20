@@ -1,7 +1,11 @@
 @extends('fiji.layouts.default')
 
 @section('styles')
-<link rel="stylesheet" type="text/css" href="{{{ asset('css/show.css') }}}" />
+        {{ Basset::show('travel-show.css') }}
+		
+		<style>
+			.box{background:url({{Asset('assets/images/travel.jpg')}}) center 0px no-repeat;}
+		</style>
 @stop
 @section('content')
 <div class="content">
@@ -23,7 +27,7 @@
 									</li>
 								</ul>
 							</div>
-							<div class="raiders_show_html">{{ $travel->content() }}</div>
+							<div class="raiders_show_html typo">{{ $travel->content() }}</div>
 							<div class="raiders_other_mes">
 								<ul>
 <div id="travel_mark_{{{ $travel->id }}}" style="float:right">

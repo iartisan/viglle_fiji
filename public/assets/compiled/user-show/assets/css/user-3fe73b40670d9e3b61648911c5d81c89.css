@@ -1,7 +1,3 @@
-.head
-{
-	background:url(../assets/images/user_big.jpg) center 0px;
-}
 .content
 {
 	margin-top: 25px;
@@ -15,7 +11,7 @@
 }
 .user_img
 {
-	float:left;
+    position:relative;
 	width:240px;
 	height:240px;
 	background:white;
@@ -30,7 +26,7 @@
 {
 	width:93px;
 	height:45px;
-	background:url(../images/set.png);
+	background:url(/assets/images/set.png);
 	cursor:pointer;
 	margin-left:670px;
 	margin-top:40px;
@@ -62,22 +58,30 @@
 {
 	width:60px;
 	height:61px;
-	background:url(../images/Triangle.png);
+	background:url(/assets/images/Triangle.png);
 }
 .user_bottom
 {
-	width:745px;
+	width:725px;
 	margin-left:5px;
 	height:80px;
 	background-color:#e6e6e6;
+    -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+    padding: .5em;
+    bottom:8px;
+    position:relative;
 }
 .user_bottom p
 {
 	font-size:14px;
 	color:#ff9500;
-	margin-left:640px;
 	text-decoration:underline;
 	cursor:pointer;
+    position:absolute;
+    right:5px;
+    bottom:0;
+
 }
 .user_show_word
 {
@@ -92,7 +96,7 @@
 {
 	margin:0px;
 	height:50px;
-	background:url(../images/pic_title.png);
+	background:url(/assets/images/pic_title.png);
 	width:1000px;
 	position:relative;
 }
@@ -143,7 +147,10 @@
 {
 	width:220px;
 	height:205px;
+    padding: 0 10px;
 }
+
+
 .content_body
 {
 	height:1250px;
@@ -166,6 +173,8 @@
 }
 .content_user_ul li
 {
+    -moz-border-radius:4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
 	width:150px;
 	height:35px;
 	float:left;
@@ -200,27 +209,41 @@
 	margin-left:10px;
 	font-size:18px;
 }
-.raiders_content li
-{
-	float:left;
+.raiders-li{
+    padding-top: 15px;
+    display:block;
+    clear:both;
+}
+.raiders-li .raiders_li1,
+.raiders-li .raiders_li2{
+    float:left;
 }
 .raiders_li1
 {
-	clear:both;
 	width:300px;
 	height:200px;
-	margin-top:25px;
+}
+.raiders_li1 img{
 }
 .raiders_li2
 {
-	width:450px;
+	width:420px;
 	height:200px;
 }
 .raiders_msg
 {
 	width:760px;
-	height:1130px;
+	height:1150px;
 	background:white;
+}
+
+.page{
+   position:relative; 
+}
+.pagination{
+    position:absolute;
+    right:10px;
+    top:5px;
 }
 .raiders_user_name
 {
@@ -240,7 +263,7 @@
 {
 	width:49px;
 	height:49px;
-	background:url(../images/good.png);
+	background:url(/assets/images/good.png);
 	cursor:pointer;
 	margin-left:400px;
 }
@@ -261,7 +284,7 @@
 	margin-top:35px;
 	width:230px;
 	height:145px;
-	background:url(../images/enter_raiders_1.png);
+	background:url(/assets/images/enter_raiders_1.png);
 	cursor:pointer;
 }
 .go_where,.your_city
@@ -271,9 +294,13 @@
 	height:500px;
 	position:relative;
 }
+.go_where p,.your_city  p{
+    text-align:center;
+    margin: 0;
+}
 .go_where
 {
-	background:url(../images/go_where.png);
+	background:url(/assets/images/go_where.png);
 }
 .more_where,.more_city
 {
@@ -288,7 +315,7 @@
 }
 .your_city
 {
-	background:url(../images/your_city.png);
+	background:url(/assets/images/your_city.png);
 }
 .show_where_user,.show_city_user
 {
@@ -337,20 +364,20 @@
 	clear:both;
 	width:100%;
 	height:40px;
-	background:url(../images/talk_title.png);
+	background:url(/assets/images/talk_title.png);
 }
 .talk_bg
 {
 	width:940px;
 	height:140px;
 	margin:10px auto;
-	background:url(../images/talk_bg.png);
+	background:url(/assets/images/talk_bg.png);
 }
 .talk_enter
 {
 	width:104px;
 	height:34px;
-	background:url(../images/talk_enter.png);
+	background:url(/assets/images/talk_enter.png);
 	margin-left:870px;
 	cursor:pointer;
 }
@@ -358,7 +385,7 @@
 {
 	width:110px;
 	height:110px;
-	background:url(../images/talk_user_img.png);
+	background:url(/assets/images/talk_user_img.png);
 	z-index:2;
 	margin-top:55px;
 }
@@ -389,16 +416,16 @@
 	float:left;
 	width:808px;
 	height:155px;
-	background:url(../images/talk_user_msg_1.png);
+	background:url(/assets/images/talk_user_msg_1.png);
 	position:relative;
 }
 .talk_user_text_1
 {
-	background:url(../images/talk_user_msg_1.png);
+	background:url(/assets/images/talk_user_msg_1.png);
 }
 .talk_user_text_2
 {
-	background:url(../images/talk_user_msg_2.png);
+	background:url(/assets/images/talk_user_msg_2.png);
 }
 .user_text_1
 {

@@ -1,12 +1,7 @@
-.head
-{
-	height:650px;
-}
 .content
 {
-	height:2805px;
+	margin-top: 25px;
 }
-/** Í·²¿ **/
 #user_mes
 {
 	clear:both;
@@ -16,7 +11,7 @@
 }
 .user_img
 {
-	float:left;
+    position:relative;
 	width:240px;
 	height:240px;
 	background:white;
@@ -34,7 +29,7 @@
 	background:url(../images/set.png);
 	cursor:pointer;
 	margin-left:670px;
-	margin-top:45px;
+	margin-top:40px;
 }
 .user_word
 {
@@ -67,18 +62,26 @@
 }
 .user_bottom
 {
-	width:745px;
+	width:725px;
 	margin-left:5px;
 	height:80px;
 	background-color:#e6e6e6;
+    -moz-border-radius:10px;
+ -webkit-border-radius:10px;
+    padding: .5em;
+    bottom:8px;
+    position:relative;
 }
 .user_bottom p
 {
 	font-size:14px;
 	color:#ff9500;
-	margin-left:640px;
 	text-decoration:underline;
 	cursor:pointer;
+    position:absolute;
+    right:5px;
+    bottom:0;
+
 }
 .user_show_word
 {
@@ -111,6 +114,7 @@
 	width:100%;
 	height:250px;
 	background:white;
+	border:1px solid #e6e6e6;
 }
 .content_show_pic div
 {
@@ -143,13 +147,16 @@
 {
 	width:220px;
 	height:205px;
+    padding: 0 10px;
 }
+
+
 .content_body
 {
 	height:1250px;
 	width:100%;
 	margin-top:30px;
-	background:#e6e6e6;
+	background:;
 }
 .content_user_show
 {
@@ -162,9 +169,12 @@
 	height:35px;
 	width:100%;
 	background:#f2f2f2;
+	margin:0px;
 }
 .content_user_ul li
 {
+    -moz-border-radius:4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
 	width:150px;
 	height:35px;
 	float:left;
@@ -199,27 +209,41 @@
 	margin-left:10px;
 	font-size:18px;
 }
-.raiders_content li
-{
-	float:left;
+.raiders-li{
+    padding-top: 15px;
+    display:block;
+    clear:both;
+}
+.raiders-li .raiders_li1,
+.raiders-li .raiders_li2{
+    float:left;
 }
 .raiders_li1
 {
-	clear:both;
 	width:300px;
 	height:200px;
-	margin-top:25px;
+}
+.raiders_li1 img{
 }
 .raiders_li2
 {
-	width:450px;
+	width:420px;
 	height:200px;
 }
 .raiders_msg
 {
 	width:760px;
-	height:1130px;
+	height:1150px;
 	background:white;
+}
+
+.page{
+   position:relative; 
+}
+.pagination{
+    position:absolute;
+    right:10px;
+    top:5px;
 }
 .raiders_user_name
 {
@@ -270,6 +294,10 @@
 	height:500px;
 	position:relative;
 }
+.go_where p,.your_city  p{
+    text-align:center;
+    margin: 0;
+}
 .go_where
 {
 	background:url(../images/go_where.png);
@@ -313,12 +341,13 @@
 	text-align:center;
 	line-height:40px;
 	margin-left:10px;
+	margin-bottom: 20px;
 	cursor:pointer;
 }
 .show_page_next,.show_li_2
 {
 	color:#808080;
-	background:#e6e6e6;
+	background:white;
 }
 .show_page_next
 {

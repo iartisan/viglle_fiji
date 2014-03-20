@@ -13,11 +13,12 @@
 
 		<!-- Mobile Specific Metas
 		================================================== -->
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<meta name="renderer" content="ie stable">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- CSS
 		================================================== -->
 
-<meta name="renderer" content="webkit">
 		@section('styles')
 		@show
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -32,11 +33,15 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{{ asset('assets/ico/apple-touch-icon-72-precomposed.png') }}}">
 		<link rel="apple-touch-icon-precomposed" href="{{{ asset('assets/ico/apple-touch-icon-57-precomposed.png') }}}">
 		<link rel="shortcut icon" href="{{{ asset('assets/ico/favicon.png') }}}">
+<!--[if (gte IE 6)&(lte IE 8)]>
+  <script type="text/javascript" src="{{Asset('assets/js/selectivizr.min.js')}}"></script>
+  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+<![endif]-->
 	</head>
 	<body>
 			<!-- 头部开始  -->
 			<div class="box">
-				<div style="width:1000px;margin-right:auto;margin-left:auto;z-index:2;position:relative;height:630px;">
+				<div style="width:1000px;margin:0 auto!important;z-index:2;position:relative;height:630px;">
 					<div class="head_list">
 						<div class="logo"><a href="{{{ URL::to('/') }}}" style="display:block;width:100%;height:100%;"></a></div>
 						<div class="list">
@@ -53,7 +58,7 @@
 							 @if (Auth::user()->hasRole('admin'))
 							 <li style="font-size:12px;"><a href="{{{ URL::to('admin') }}}"> 管理员</a></li>
 							  @endif
-							 <li style="font-size:12px;"><a href="{{{ URL::to('user/show/'.Auth::user()->id) }}}"> {{{ Auth::user()->username }}}</a></li>
+							 <li style="font-size:12px;color:#FF8901;"><a style="color:#ff8901;" href="{{{ URL::to('user/show/'.Auth::user()->id) }}}"> {{{ Auth::user()->username }}}</a></li>
 							  <li style="font-size:12px;"><a href="{{{ URL::to('user/logout') }}}">登出</a></li>
 							@else
 								<li style="font-size:12px;" {{ (Request::is('user/login') ? ' class="active"' : '') }}><a href="{{{ URL::to('user/login') }}}" class="iframe">登陆</a></li>
