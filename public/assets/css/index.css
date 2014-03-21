@@ -284,9 +284,9 @@
 	margin-top:20px;
     box-shadow:0 0 10px #222;
 }
-.user_mes ul li
+.user_mes ul
 {
-	
+    margin-bottom: 20px;
 }
 .user_img
 {

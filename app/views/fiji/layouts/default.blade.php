@@ -1,7 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=7,9">
 		<title>
 			@section('title')
 			斐济旅行
@@ -11,13 +12,8 @@
 		<meta name="author" content="Viglle" />
 		<meta name="description" content="斐济旅行" />
 
-		<!-- Mobile Specific Metas
-		================================================== -->
-<meta http-equiv="X-UA-Compatible" content="IE=7">
-<meta name="renderer" content="ie stable">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!-- CSS
-		================================================== -->
+        <meta name="renderer" content="webkit">
 
 		@section('styles')
 		@show
@@ -33,10 +29,6 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{{ asset('assets/ico/apple-touch-icon-72-precomposed.png') }}}">
 		<link rel="apple-touch-icon-precomposed" href="{{{ asset('assets/ico/apple-touch-icon-57-precomposed.png') }}}">
 		<link rel="shortcut icon" href="{{{ asset('assets/ico/favicon.png') }}}">
-<!--[if (gte IE 6)&(lte IE 8)]>
-  <script type="text/javascript" src="{{Asset('assets/js/selectivizr.min.js')}}"></script>
-  <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
-<![endif]-->
 	</head>
 	<body>
 			<!-- 头部开始  -->
