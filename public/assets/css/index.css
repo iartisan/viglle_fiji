@@ -254,8 +254,8 @@
 	width:220px;
 	height:475px;
 	margin-left:20px;
-	border:1px solid red;
 	margin-top:-48px;
+    position:relative;
 }
 .weather_top
 {
@@ -263,11 +263,32 @@
 	line-height:50px;
 	color:white;
 	width:100%;
-	-moz-border-radius:5px;/*仅Firefox支持，实现圆角效果*/
-	-webkit-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
-	-khtml-border-radius:5px;/*仅Safari,Chrome支持，实现圆角效果*/
-	border-radius:5px;/*仅Opera，Safari,Chrome支持，实现圆角效果*/
+	-moz-border-radius:10px 10px 0 0;/*仅Firefox支持，实现圆角效果*/
+	-webkit-border-radius:10px 10px 0 0;/*仅Safari,Chrome支持，实现圆角效果*/
+	border-radius:10px 10px 0 0;/*仅Opera，Safari,Chrome支持，实现圆角效果*/
 	background:#ff9500;
+}
+
+.weather_img{
+
+}
+
+.weather_icon{
+    position: absolute;
+    bottom:-15px;
+    left:40%;
+}
+.weather_temp{
+    position:absolute;
+    bottom:5px;
+    right:12px;
+    color: #fff;
+    font-size:28px;
+}
+
+.weather_temp em{
+    font-style:normal;
+    font-size:18px;
 }
 .user_img
 {
