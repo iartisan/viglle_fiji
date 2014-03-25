@@ -56,6 +56,7 @@
     position:absolute;
     bottom:0;
     width: 350px;
+    display:none;
 }
 
 .hotel_price_bg
@@ -215,4 +216,22 @@
 	height:150px;
 	font-size:18px;
 	color:white;
+}
+/*图片覆盖层*/
+.img-block .img-overlay-content{
+    background-color: rgba(0,0,0,.6);
+    *background:url(../img/overlay-bg.png);
+    position:absolute;
+    display:none;
+    z-index:50;
+    top:0;
+    left:0;
+
+}
+
+.img-block .img-overlay-content .overlay-content{
+    margin: 0px auto;
+    padding: 45px;
+    font-size: 18px;
+    color: white;
 }

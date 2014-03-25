@@ -18,52 +18,62 @@
 						<ul>
 							<li>
 								<div class="hpanel">
-									<img src="images/line1.jpg" width=360 height=512 />
+                                    <a href="{{Asset('blank')}}">
+									<img src="{{Asset('site/tickets/01.png')}}" width=360 height=512 />
 									<div class="lines_word"><div style="margin-top:20px;">斐济推荐线路01</div></div>
 									<div class="roads_word">
 										<p style="font-size:30px;margin-top:15px;">斐济推荐线路01</p>
 										<p style="font-size:17px;width:300px;margin:0px auto;margin-top:12px;text-align:left;">Nadi | 南迪，“天堂里的天堂”，当你置身于蓝天碧海、椰林摇曳、洁白如雪的沙滩中，一定会被这充满热带风情的空气所感染。</p>
 									</div>
+                                    </a>
 								</div>
 							</li>
 							<li>
 								<div class="hpanel">
-									<img src="images/line1.jpg" width=360 height=512 />
+                                    <a href="{{Asset('blank')}}">
+									<img src="{{Asset('site/tickets/02.png')}}" width=360 height=512 />
 									<div class="lines_word"><div style="margin-top:20px;">斐济推荐线路03</div></div>
 									<div class="roads_word">
 										<p style="font-size:30px;margin-top:15px;">斐济推荐线路02</p>
 										<p style="font-size:17px;width:300px;margin:0px auto;margin-top:12px;text-align:left;">Nadi | 南迪，“天堂里的天堂”，当你置身于蓝天碧海、椰林摇曳、洁白如雪的沙滩中，一定会被这充满热带风情的空气所感染。</p>
 									</div>
+                                    </a>
 								</div>
 							</li>
 							<li>
 								<div class="hpanel">
-									<img src="images/line1.jpg" width=360 height=512 />
+                                    <a href="{{Asset('blank')}}">
+									<img src="{{Asset('site/tickets/03.png')}}" width=360 height=512 />
 									<div class="lines_word"><div style="margin-top:20px;">斐济推荐线路03</div></div>
 									<div class="roads_word">
 										<p style="font-size:30px;margin-top:15px;">斐济推荐线路03</p>
 										<p style="font-size:17px;width:300px;margin:0px auto;margin-top:12px;text-align:left;">Nadi | 南迪，“天堂里的天堂”，当你置身于蓝天碧海、椰林摇曳、洁白如雪的沙滩中，一定会被这充满热带风情的空气所感染。</p>
 									</div>
+                                    </a>
 								</div>
 							</li>
 							<li>
 								<div class="hpanel">
-									<img src="images/line1.jpg" width=360 height=512 />
+                                    <a href="{{Asset('blank')}}">
+									<img src="{{Asset('site/tickets/04.png')}}" width=360 height=512 />
 									<div class="lines_word"><div style="margin-top:20px;">斐济推荐线路04</div></div>
 									<div class="roads_word">
 										<p style="font-size:30px;margin-top:15px;">斐济推荐线路04</p>
 										<p style="font-size:17px;width:300px;margin:0px auto;margin-top:12px;text-align:left;">Nadi | 南迪，“天堂里的天堂”，当你置身于蓝天碧海、椰林摇曳、洁白如雪的沙滩中，一定会被这充满热带风情的空气所感染。</p>
 									</div>
+                                        </a>
 								</div>
 							</li>
 							<li>
 								<div class="hpanel">
-									<img src="images/line1.jpg" width=360 height=512 />
+                                    <a href="{{Asset('blank')}}">
+									<img src="{{Asset('site/tickets/05.png')}}" width=360 height=512 />
 									<div class="lines_word"><div style="margin-top:20px;">斐济推荐线路05</div></div>
 									<div class="roads_word">
 										<p style="font-size:30px;margin-top:15px;">斐济推荐线路05</p>
 										<p style="font-size:17px;width:300px;margin:0px auto;margin-top:12px;text-align:left;">Nadi | 南迪，“天堂里的天堂”，当你置身于蓝天碧海、椰林摇曳、洁白如雪的沙滩中，一定会被这充满热带风情的空气所感染。</p>
 									</div>
+                                        </a>
 								</div>
 							</li>
 						</ul>

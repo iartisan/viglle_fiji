@@ -168,6 +168,11 @@ Route::post('post/{postSlug}', 'BlogController@postView');
 Route::get('ticket/index','TicketController@getIndex');
 Route::get('ticket/{id}','TicketController@getView');
 
+//测试页面
+Route::get('blank',function(){
+    return "页面正在构建中";
+});
+
 
 # Index Page - Last route, no matches
 Route::get('/', array('before' => 'detectLang','uses' => 'IndexController@getIndex'));

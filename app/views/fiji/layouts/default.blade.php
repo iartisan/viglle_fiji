@@ -77,7 +77,9 @@
 			<div class="bottom">
 				<div class="bottom_word">因为有你，冲绳天堂的距离更进一步！</div>
 				<div class="bottom_wall"></div>
-				<div class="bottom_href"></div>
+				<div class="bottom_href">
+                    <a href="#" class="friend-links">友情链接</a>
+                </div>
 			</div>
 			<!-- 底部结束  -->
         {{ Basset::show('public.js') }}

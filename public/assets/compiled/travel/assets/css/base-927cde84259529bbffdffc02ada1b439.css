@@ -188,6 +188,7 @@ ul
 	width:100%;
 	height:250px;
 	background:#333;
+    position:relative;
 }
 .pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
 z-index: 2;
@@ -195,4 +196,14 @@ color: #fff;
 background-color: #ff9500;
 border-color: #ff9500;
 cursor: default;
+}
+
+.friend-links{
+    background-color: #ff9500;
+    color:#fff!important;
+    padding: 15px;
+    position:absolute;
+    left:45%;
+    top:45%;
+
 }

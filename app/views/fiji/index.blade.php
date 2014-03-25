@@ -17,20 +17,29 @@
 					<div class="hotel_part1">
 						<div class="hotel_part1_img1 show-block img-block">
 							<img src="{{{ URL::asset($hotels[0]->pic1_url) }}}/origin.jpg" />
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 						</div>
 						<div class="hotel_part1_img2 show-block img-block">
 							<img src="{{{ URL::asset($hotels[0]->pic2_url) }}}/origin.jpg" />
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 						</div>
 					</div>
 					<div class="hotel_part2 show-block">
-						<div class="hotel_part2_img1 img-block" onmouseenter ="show_bg(0)">
+						<div class="hotel_part2_img1 img-block">
 							<img src="{{{ URL::asset($hotels[0]->pic3_url) }}}/origin.jpg" />
-							<!--<div class="hotel_base" onmouseleave="close_bg(0)">-->
-								<!--<div class="hotel_part3_base"></div>-->
-								<!--<div class="hotel_price_bg" >-->
-									<!--<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>-->
-								<!--</div>-->
-							<!--</div>-->
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 						</div>
 						<div class="hote1_part2_word">
 							<div class="hote1_part2_word_top"></div>
@@ -53,27 +62,38 @@
 						</div>
 						<div class="hotel_part2_img1 img-block" style="margin:0px;" >
 							<img src="{{{ URL::asset($hotels[1]->pic1_url) }}}/origin.jpg" />
-							<!--<div class="hotel_base"  onmouseleave="close_bg(2)">-->
-								<!--<div class="hotel_part3_base"></div>-->
-								<!--<div class="hotel_price_bg">-->
-									<!--<div class="hotel_price_show"><span style="font-size:30px;">RMB</span><span class="hotel_price">{{{ $hotels[0]->price }}}</span></div>-->
-								<!--</div>-->
-							<!--</div>-->
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 						</div>
 					</div>
 					<div class="hotel_part1">
 						<div class="hotel_part1_img1 show-block img-block" >
 							<img src="{{{ URL::asset($hotels[1]->pic2_url) }}}/origin.jpg" />
-							<div class="hotel_base" >
-								<div class="hotel_text_show">{{{ $hotels[1]->content }}}</div>
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">{{{ $hotels[1]->content }}}</div>
 							</div>
+                            </a>
 						</div>
 						<div class="hotel_part1_img2 show-block img-block">
 							<img src="{{{ URL::asset($hotels[1]->pic3_url) }}}/origin.jpg" />
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 						</div>
 					</div>
 					<div class="hotel_part3 show-block img-block">
 						<img src="{{{ URL::asset($hotels[1]->pic4_url) }}}/origin.jpg" />
+                            <a href="{{Asset('blank')}}">
+							<div class="img-overlay-content" >
+								<div class="overlay-content">xxx</div>
+							</div>
+                            </a>
 					</div>
 				</div>
 				<div class="content_center">
@@ -91,11 +111,11 @@
 								</tr>
 								<tr>
 									<td class="td1">出发日期</td>
-									<td><input type="text" id="plane_date_go" class="inputs" /></td>
+									<td><input type="text" id="plane_date_go" class="inputs" onClick="WdatePicker({position:{left:180}})" /></td>
 								</tr>
 								<tr>
 									<td class="td1">返回日期</td>
-									<td><input type="text" id="plane_date_return" class="inputs" /></td>
+									<td><input type="text" id="plane_date_return" class="inputs" onClick="WdatePicker({position:{left:180}})" /></td>
 								</tr>
 								<tr>
 									<td class="td1">&nbsp;</td>
@@ -108,7 +128,7 @@
 					<div class="plane_show">
 						<table cellspacing=0 cellpadding=0 style="font-size:18px; width:100%;margin:40px  auto;border:0px solid red;">
                             <tbody>
-							<tr class="tr1">
+							<tr class="tr2">
 								<td class="plane_date_td">2013/12/13</td>
 								<td class="plane_city_td">香港 - 斐济</td>
 								<td class="plane_price_td">￥3968元</td>
@@ -158,7 +178,11 @@
                                 <a href=" {{{ URL::to('user/show/'.$user->id) }}} ">
 								<li class="user_img"><img src="{{{$user->avatar}}}" width=320 height=250 /></li>
                                 </a>
-								<li class="user_name"><div class="user_name_box">{{{$user->username}}}</div><div class="user_word">{{{$user->intro}}}</div>
+								<li class="user_name">
+                                <a href=" {{{ URL::to('user/show/'.$user->id) }}} ">
+                        <div class="user_name_box">{{{$user->username}}}</div>
+                                </a>
+                        <div class="user_word">{{{$user->intro}}}</div>
                                 <a href=" {{{ URL::to('user/show/'.$user->id.'#usercomment') }}} ">
                                 <div class="user_talk"></div>
                                 </a>
@@ -174,24 +198,18 @@
 			<!-- 正文结束  -->
 @stop
 @section('scripts')
+        <script src="{{ Asset('assets/js/My97DatePicker/WdatePicker.js') }}"></script>
 			<script>
-				function show_bg(num)
-				{
-					$(".hotel_base").eq(num).slideDown("fast");
-				}
-				function close_bg(num)
-				{
-					$(".hotel_base").eq(num).slideUp("fast");
-				}
-				function  Isover(obj)
-				{
-					obj.className="tr1";
-				}
-				function Isout(obj)
-				{
-					obj.className="tr2";
-				}
+        $(document).ready(function(){
+                
                 $(".user_mes:nth-child(3n)").css('margin-right','0');
+
+                $('.img-block').mouseover(function(){
+                        $(this).find('.img-overlay-content').width($(this).width()).height($(this).height()).css('display','block');
+                        }).mouseleave(function(){
+                        $(this).find('.img-overlay-content').css('display','none');
+                        });
+            });
             
 			</script>
 			@stop

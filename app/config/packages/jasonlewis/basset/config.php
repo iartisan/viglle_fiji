@@ -41,7 +41,9 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                $collection->javascript('My97DatePicker/WdatePicker.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -58,7 +60,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -76,7 +79,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -93,7 +97,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -110,7 +115,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -127,7 +133,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -144,7 +151,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -160,7 +168,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->add('jquery.colorbox.js');
             })->apply('JsMin');
@@ -176,7 +185,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
                 $collection->add('jquery.colorbox.js');
@@ -196,7 +206,8 @@ return array(
 
             $collection->directory('assets/js', function($collection)
             {
-                $collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
+                $collection->javascript('jquery.js');
+                //$collection->javascript('//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js');
                 //$collection->add('bootstrap/bootstrap.js');
                 $collection->requireDirectory('../../../vendor/twbs/bootstrap/js');
                 $collection->add('wysihtml5/wysihtml5-0.3.0.js');
