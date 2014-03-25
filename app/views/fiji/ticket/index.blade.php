@@ -94,15 +94,15 @@
 				</div>
 				<div class="order_by">
 					<ul>
-						<li>日期<img src="images/top1.png" width=23 height=17 /></li>
-						<li>价格<img src="images/top1.png" width=23 height=17 /></li>
-						<li>起飞时间<img src="images/top1.png" width=23 height=17 /></li>
+						<li>日期<img src="{{Asset('images/top1.png')}}" width=23 height=17 /></li>
+						<li>价格<img src="{{Asset('images/top1.png')}}" width=23 height=17 /></li>
+						<li>起飞时间<img src="{{Asset('images/top1.png')}}" width=23 height=17 /></li>
 					</ul>
 				</div>
 				<div class="show_result">
 					<div class="ticket_msg">
 						<div class="ticket_img">
-							<img src="images/company1.png" />
+							<img src="{{Asset('images/company1.png')}}" />
 							<div class="plane_size">
 								<p>738</p>
 								<p>中</p>
@@ -168,7 +168,6 @@
 @stop
 
 @section('scripts')
-	<script type="text/javascript" src="{{{ asset('js/jquery.js') }}} "></script> 
 	<script type="text/javascript" src=" {{{ asset('js/haccordion.js') }}} "></script> 
 	<script src="{{{ asset('js/My97DatePicker/WdatePicker.js') }}} " type="text/javascript"></script>
 	<script type="text/javascript">

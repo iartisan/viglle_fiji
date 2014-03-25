@@ -111,7 +111,7 @@
         @endif
 					<tr>
 						<td class="td1">邮箱 :&nbsp;</td>
-						<td><input type='text' name="email" id="email" valud="{{{ Input::old('email') }}}") /></td>
+						<td><input type='text' name="email" id="email" value="{{{ Input::old('email') }}}") /></td>
 					</tr>
 					<tr>
 						<td class="td1">昵称 :&nbsp;</td>

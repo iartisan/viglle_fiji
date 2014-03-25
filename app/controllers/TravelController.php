@@ -12,7 +12,12 @@ class TravelController extends BaseController{
 
 		public function getIndex(){
                 $user = $this->user->currentUser();
-				$travels = $this->travel->orderBy('created_at', 'DESC')->paginate(10);
+				$travels = $this->travel->orderBy('created_at', 'DESC')->paginate(5);
+				return View::make('fiji/travel/index',compact('travels','user'));
+		}
+		public function getContent(){
+                $user = $this->user->currentUser();
+				$travels = $this->travel->orderBy('created_at', 'ASC')->paginate(5);
 				return View::make('fiji/travel/index',compact('travels','user'));
 		}
 
@@ -68,12 +73,14 @@ class TravelController extends BaseController{
         public function getShow($id){
             $travel = $this->travel->where('id','=',$id)->first();
             $author = $this->user->where('id','=',$travel->user_id)->first();
+            $travels = $this->travel->orderBy('created_at','DESC')->take(10)->get();
+            $travels_1 = $this->travel->orderBy('created_at','ASC')->take(10)->get();
             if(is_null($travel)){
                 return App::abort(404);
             }
             $user = $this->user->currentUser();
             //return var_dump($author);
-            return View::make('fiji/travel/show',compact('travel','user','author'));
+            return View::make('fiji/travel/show',compact('travel','user','author','travels','travels_1'));
         }
 
 

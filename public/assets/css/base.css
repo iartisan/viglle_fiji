@@ -207,3 +207,6 @@ cursor: default;
     top:45%;
 
 }
+.alert.alert-danger{
+    text-align:center;
+}

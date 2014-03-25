@@ -111,6 +111,7 @@ Route::get('travel/{travel}/post', function(){
 Route::get('travel/addmark','TravelController@addMark');
 Route::get('travel/submark','TravelController@subMark');
 
+Route::get('travel/content','TravelController@getContent');
 Route::get('travel/index','TravelController@getIndex');
 Route::get('travel/{travel}/show','TravelController@getShow');
 Route::get('travel/user/album/data', 'UserpicController@getAlbumData');

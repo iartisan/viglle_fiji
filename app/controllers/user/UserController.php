@@ -315,6 +315,8 @@ class UserController extends BaseController {
         } else {
             unset($this->user->password);
             unset($this->user->password_confirmation);
+                return Redirect::to('user/create')
+                    ->with('error', '请填写相关信息');
         }
 
         // Save if valid. Password field will be hashed before save

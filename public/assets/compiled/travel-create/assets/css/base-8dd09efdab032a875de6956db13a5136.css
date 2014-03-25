@@ -175,7 +175,7 @@ ul
 	background:#ff9500;
 	color:#fff;
 	line-height:100px;
-	font-size:30px;
+	font-size:23px;
 	text-align:center;
 }
 .bottom_wall
@@ -206,4 +206,7 @@ cursor: default;
     left:45%;
     top:45%;
 
+}
+.alert.alert-danger{
+    text-align:center;
 }

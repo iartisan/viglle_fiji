@@ -58,7 +58,7 @@ class User extends ConfideUser implements PresentableInterface {
 
 
     public function url(){
-        return Url::to('user/show');
+        return Url::to('user/show/'.$this->id);
     }
 
     /**

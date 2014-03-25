@@ -14,8 +14,16 @@
 				<div class="content_body">
 					<div class="content_user_show">
 							<ul class="content_user_ul">
-								<li class="content_user_card1">玩转斐济岛</li>
-								<li class="content_user_card2" style="margin-left:10px;">吃货走天下</li>
+                                <a href="{{URL::to('travel/index')}}">
+								<li class="content_user_card @if(Request::url()== URL::to('travel/index')) active @endif">
+                                玩转斐济岛
+                                </li>
+                            </a>
+                                <a href="{{URL::to('travel/content')}}">
+								<li class="content_user_card @if(Request::url()==URL::to('travel/content')) active @endif" style="margin-left:10px;">
+                                吃货走天下
+                                </li>
+                                </a>
 							</ul>
 							<div class="content_user_card_bottom"></div>
 					</div>
@@ -23,13 +31,17 @@
 						<ul class="raiders_content">
 @foreach($travels as $travel)
 							<li class="raiders_li1">
-                            <img width="300" height="200" src="{{{ $travel->has_pic }}}" alt="">
+                            <a href=" {{{ $travel->url() }}} "><img width="300" height="200" src="{{{ $travel->has_pic }}}" alt=""></a>
                             </li>
 							<li class="raiders_li2">
 								<div style="width:580px;margin:20px;">
                                     <a href=" {{{ $travel->url() }}} ">    <p class="raiders_title">{{{ $travel->title }}}</p></a>
-                                    <p><span class="raiders_user_name">{{{ $travel->author->username }}}</span><span class="raiders_user_time">发布于{{{ $travel->date() }}}</span></p>
-									<p class="raiders_user_text">{{{ $travel->summary() }}}……</p>
+                                    <p>
+                                    <a href="{{ $travel->author->url() }}">
+                                    <span class="raiders_user_name">{{{ $travel->author->username }}}</span>
+                                </a>
+                                    <span class="raiders_user_time">发布于{{{ $travel->date() }}}</span></p>
+                                    <a href=" {{{ $travel->url() }}} "><p class="raiders_user_text">{{{ $travel->summary() }}}……</p></a>
 								</div>
 <div id="travel_mark_{{{ $travel->id }}}" style="float:right">
 				<a href="javascript:;" onclick="unlike({{{$travel->id}}})" class="unlike_post" style="display:none;" >取消赞</a>
@@ -44,14 +56,16 @@
 						</ul>
                         <div style="clear:both;"></div>
 					</div>
-					<div style="width:100%;height:40px;margin-top:30px;">
-						<ul class="show_page_1">
+                    <div class="page" style="float:right;padding-top:10px;">
 {{ $travels->links() }}
-							<li  class="show_li_1">1</li>
-							<li  class="show_li_2">2</li>
-							<li class="show_page_next">下一页</li>
-						</ul>
-					</div>
+                    </div>
+					<!--<div style="width:100%;height:40px;margin-top:30px;">-->
+						<!--<ul class="show_page_1">-->
+							<!--<li  class="show_li_1">1</li>-->
+							<!--<li  class="show_li_2">2</li>-->
+							<!--<li class="show_page_next">下一页</li>-->
+						<!--</ul>-->
+					<!--</div>-->
 				</div>
 				<div class="content_bottom"></div>
 			</div>

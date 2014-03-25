@@ -50,31 +50,23 @@
 							<div class="raiders_more_list_1">
 								<div class="raiders_list_1_top"></div>
 								<ul class="raiders_show_text">
-									<li><div>1</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>2</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>3</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>4</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>5</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>6</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>7</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>8</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>9</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>10</div>海岛自由行 斐济南迪自由行...</li>
+                                    <?php $i = 0; ?>
+                                    @foreach($travels as $travel_s)
+                                    <?php $i++; ?>
+                                    
+                                    <a href="{{{$travel_s->url()}}}" ><li><div>{{$i}}</div>{{{$travel_s->title}}}</li></a>
+</a>                                    @endforeach
 								</ul>
 							</div>
 							<div class="raiders_more_list_1">
 								<div class="raiders_list_2_top"></div>
 								<ul class="raiders_show_text">
-									<li><div>1</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>2</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>3</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>4</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>5</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>6</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>7</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>8</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>9</div>海岛自由行 斐济南迪自由行...</li>
-									<li><div>10</div>海岛自由行 斐济南迪自由行...</li>
+                                    <?php $i = 0; ?>
+                                    @foreach($travels_1 as $travel_s)
+                                    <?php $i++; ?>
+                                    
+                                    <a href="{{{$travel_s->url()}}}" ><li><div>{{$i}}</div>{{{$travel_s->title}}}</li></a>
+                                    @endforeach
 								</ul>
 							</div>
 						</div>

@@ -38,12 +38,12 @@ width:100%;
 	font-size:18px;
 	cursor:pointer;
 }
-.content_user_card1
+.content_user_card.active
 {
 color:white;
 background:#ff9500;
 }
-.content_user_card2
+.content_user_card
 {
 color:black;
 background:#e6e6e6;

@@ -83,8 +83,6 @@
 			</div>
 			<!-- 底部结束  -->
         {{ Basset::show('public.js') }}
-		@section('scripts')
-		@show
 		<script>
 				$(document).ready(function(){
 						$(".iframe").colorbox({iframe:true,width:"480px",height:"670px:",opacity:"0.5"});
@@ -93,5 +91,7 @@
 						});
 				})
 		</script>
+		@section('scripts')
+		@show
 	</body>
 </html>

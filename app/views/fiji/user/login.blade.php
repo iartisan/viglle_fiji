@@ -141,7 +141,7 @@
 					</tr>
 					<tr>
 						<td class="td1">&nbsp; </td>
-						<td><input type=checkbox style="width:15px;height:15px; "  name="remember"  /><span style="margin-left:220px;font-size:14px;color:#197ed6;cursor:pointer;width:60px;"><a  href="forgot">忘记密码?</a></span></td>
+						<td><input type=checkbox style="width:15px;height:15px; "  name="remember"  /><span style="font-size:14px;">记住密码</span><span style="margin-left:180px;font-size:14px;color:#197ed6;cursor:pointer;width:60px;"><a  href="forgot">忘记密码?</a></span></td>
 					</tr>
        
         @if ( Session::get('error') )
